@@ -15,6 +15,32 @@ let max_symb = 80;
 let contentArray = localStorage.getItem('items') ? JSON.parse(localStorage.getItem('items')) : [];
 contentArray.forEach(divMaker)
 
+function shuffle(){
+    let currentIndex = contentArray.length,  randomIndex;
+
+  // While there remain elements to shuffle.
+  while (currentIndex != 0) {
+
+    // Pick a remaining element.
+    randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex--;
+
+    // And swap it with the current element.
+    [contentArray[currentIndex], contentArray[randomIndex]] = [
+        contentArray[randomIndex], contentArray[currentIndex]];
+  }
+
+  
+
+  localStorage.setItem('items', JSON.stringify(contentArray));
+  flashcards.innerHTML = '';
+
+  contentArray.forEach(divMaker);
+
+}
+
+
+
 
 function divMaker(text){
     var div = document.createElement("div");
