@@ -47,6 +47,7 @@ button:hover{
 .container{
     width: 95%;
     margin: auto;
+
 }
 
 .nav{
@@ -65,6 +66,12 @@ button:hover{
     align-items: center;
     justify-content: center;
 }
+
+.logo{
+    width: 30px;
+    height: 30px;
+}
+
 .nav button{
 width: 35px;
 height: 35px;
@@ -91,7 +98,8 @@ fill: #ffffff;
 transition: 0.5s;
     }
 
-    .nav button:hover svg{
+    .nav button:hover svg,
+    .nav button:hover svg path{
 fill: #908161;
         }
 
@@ -176,6 +184,7 @@ transform: translate(-50%, -80%);
     margin: auto;
     margin-top: 10px;
     padding: 0 10px;
+
 }
 
 .flashcard{
